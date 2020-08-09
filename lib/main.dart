@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:monasafer/profitComponent.dart';
+import 'cardComponent.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,115 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Container(
-            width: 450,
-            height: 50,
-            child: const Center(
-              child: Text(
-                'Safe 78.000',
-                textScaleFactor: 1.8,
-                style: TextStyle(color: Colors.black),
-              ),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50)),
-              color: Colors.yellow,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: Offset(0, 3),
-                ) // changes position of shadow),
-              ],
-            ),
-          ),
-          Container(
-            width: 340,
-            height: 140,
-            margin: EdgeInsets.only(top: 30),
-            child: const Center(
-              child: Text(
-                '78.000',
-                textScaleFactor: 3,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50),
-                  bottomRight: Radius.circular(50)),
-              color: Colors.greenAccent,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.green.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: Offset(0, 3),
-                ) // changes position of shadow),
-              ],
-            ),
-          ),
-          Container(
-            width: 340,
-            height: 140,
-            margin: EdgeInsets.only(top: 30),
-            child: const Center(
-              child: Text(
-                '48.000',
-                textScaleFactor: 3,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50),
-                  bottomRight: Radius.circular(50)),
-              color: Colors.redAccent,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.red.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: Offset(0, 3),
-                ) // changes position of shadow),
-              ],
-            ),
-          ),
-          Container(
-            width: 340,
-            height: 140,
-            margin: EdgeInsets.only(top: 30),
-            child: const Center(
-              child: Text(
-                '30.000',
-                textScaleFactor: 3,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(50),
-                  bottomRight: Radius.circular(50)),
-              color: Colors.yellow,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.yellowAccent.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: Offset(0, 3),
-                ) // changes position of shadow),
-              ],
-            ),
-          ),
+          ProfitComponent(),
+          CardComponent(
+              mount: "70.001",
+              backgroundColor: Colors.greenAccent,
+              shadowColor: Colors.green),
+          CardComponent(
+              mount: "50.001",
+              backgroundColor: Colors.redAccent,
+              shadowColor: Colors.red),
+          CardComponent(
+              mount: "30.001",
+              backgroundColor: Colors.yellow,
+              shadowColor: Colors.yellowAccent)
         ],
       ),
     );
