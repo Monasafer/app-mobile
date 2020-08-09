@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'incomeListComponent.dart';
 import 'outputListComponent.dart';
 
 class CardComponent extends StatefulWidget {
@@ -28,7 +29,7 @@ class _CardComponentState extends State<CardComponent> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => outputListComponent()),
+            MaterialPageRoute(builder: (context) => incomeListComponent()),
           );
         },
         shape: new RoundedRectangleBorder(
