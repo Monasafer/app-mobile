@@ -42,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ProfitComponent(),
           CardComponent(
-              mount: "70.001",
-              backgroundColor: Colors.greenAccent,
-              shadowColor: Colors.green),
+                mount: "70.001",
+                backgroundColor: Colors.greenAccent,
+                shadowColor: Colors.green),
           CardComponent(
               mount: "50.001",
               backgroundColor: Colors.redAccent,
