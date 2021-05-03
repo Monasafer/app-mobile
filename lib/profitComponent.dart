@@ -16,7 +16,7 @@ class _ProfitComponentState extends State<ProfitComponent> {
         child: Text(
           'Safe 78.000',
           textScaleFactor: 1.8,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white70),
         ),
       ),
       decoration: BoxDecoration(
