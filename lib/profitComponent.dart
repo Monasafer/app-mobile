@@ -11,19 +11,19 @@ class _ProfitComponentState extends State<ProfitComponent> {
   Widget build(BuildContext context) {
     return Container(
       width: 450,
-      height: 50,
+      height: 45,
       child: const Center(
         child: Text(
           'Safe 78.000',
-          textScaleFactor: 1.8,
-          style: TextStyle(color: Colors.white70),
+          textScaleFactor: 1.6,
+          style: TextStyle(color: Colors.black),
         ),
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(50),
             bottomRight: Radius.circular(50)),
-        color: Colors.yellow,
+        color: Colors.amberAccent,
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
