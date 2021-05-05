@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:monasafer/cardComponent.dart';
 import 'package:monasafer/profitComponent.dart';
-import 'cardComponent.dart';
-import 'package:http/http.dart' as http;
-import 'pages/LoginPage.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,28 +12,24 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'MONASAFER'),
+      home: HomePageReference(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
+class HomePageReference extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageReferenceState createState() => _HomePageReferenceState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageReferenceState extends State<HomePageReference> {
   @override
   Widget build(BuildContext context) {
-    return LoginPage();
-      Scaffold(
+    return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
         title: Text(
-          widget.title,
+          "MONASAFER",
           style: TextStyle(
             fontSize: 20.0,
             letterSpacing: 2.0,
@@ -51,9 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ProfitComponent(),
           CardComponent(
-                mount: "70.001",
-                backgroundColor: Colors.greenAccent,
-                shadowColor: Colors.green),
+              mount: "70.001",
+              backgroundColor: Colors.greenAccent,
+              shadowColor: Colors.green),
           CardComponent(
               mount: "50.001",
               backgroundColor: Colors.redAccent,
@@ -67,3 +57,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
