@@ -3,11 +3,9 @@ import 'package:monasafer/profitComponent.dart';
 import 'cardComponent.dart';
 import 'package:http/http.dart' as http;
 import 'pages/LoginPage.dart';
-
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
