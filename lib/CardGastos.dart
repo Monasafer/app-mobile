@@ -89,9 +89,10 @@ class _CardComponentState extends State<CardGastos> {
           );;
         }else{
           return Center(child: SizedBox(
-            height: 100,
-            width: 100,
+            height: 75,
+            width: 75,
             child: CircularProgressIndicator(
+              strokeWidth: 4.0,
               backgroundColor: Colors.brown,
             ),
           ));
