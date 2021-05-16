@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:monasafer/profitComponent.dart';
 import 'cardComponent.dart';
-
+import 'package:http/http.dart' as http;
+import 'pages/LoginPage.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Monasafer',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Monasafer'),
+      home: MyHomePage(title: 'MONASAFER'),
     );
   }
 }
@@ -31,10 +32,16 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return LoginPage();
+      Scaffold(
+      backgroundColor: Colors.amber[50],
       appBar: AppBar(
         title: Text(
           widget.title,
+          style: TextStyle(
+            fontSize: 20.0,
+            letterSpacing: 2.0,
+          ),
         ),
         centerTitle: true,
       ),
